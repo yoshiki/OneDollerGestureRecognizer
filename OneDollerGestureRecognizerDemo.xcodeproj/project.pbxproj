@@ -7,14 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		84B01AD51A81231E0032CBC5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B01AD41A81231E0032CBC5 /* AppDelegate.swift */; };
-		84B01AD71A81231E0032CBC5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B01AD61A81231E0032CBC5 /* ViewController.swift */; };
-		84B01ADA1A81231E0032CBC5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84B01AD81A81231E0032CBC5 /* Main.storyboard */; };
-		84B01ADC1A81231E0032CBC5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84B01ADB1A81231E0032CBC5 /* Images.xcassets */; };
-		84B01ADF1A81231E0032CBC5 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84B01ADD1A81231E0032CBC5 /* LaunchScreen.xib */; };
-		84B01AEB1A81231E0032CBC5 /* DollerGestureRecognizerDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B01AEA1A81231E0032CBC5 /* DollerGestureRecognizerDemoTests.swift */; };
-		84B01AF61A8123530032CBC5 /* DollerGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B01AF51A8123530032CBC5 /* DollerGestureRecognizer.swift */; };
-		84B01AF81A8123920032CBC5 /* GestureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B01AF71A8123920032CBC5 /* GestureView.swift */; };
+		D625F0441A81C61F00EFD3B4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D625F0411A81C61F00EFD3B4 /* AppDelegate.swift */; };
+		D625F0451A81C61F00EFD3B4 /* GestureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D625F0421A81C61F00EFD3B4 /* GestureView.swift */; };
+		D625F0461A81C61F00EFD3B4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D625F0431A81C61F00EFD3B4 /* ViewController.swift */; };
+		D625F0511A81C65A00EFD3B4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D625F04E1A81C65A00EFD3B4 /* Images.xcassets */; };
+		D625F0561A81C66500EFD3B4 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D625F0521A81C66500EFD3B4 /* LaunchScreen.xib */; };
+		D625F0571A81C66500EFD3B4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D625F0541A81C66500EFD3B4 /* Main.storyboard */; };
+		D625F0591A81C67F00EFD3B4 /* OneDollerGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D625F0581A81C67F00EFD3B4 /* OneDollerGestureRecognizer.swift */; };
+		D625F05C1A81C6AD00EFD3B4 /* OneDollerGestureRecognizerDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D625F05A1A81C69500EFD3B4 /* OneDollerGestureRecognizerDemoTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,18 +28,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		84B01ACF1A81231D0032CBC5 /* DollerGestureRecognizerDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DollerGestureRecognizerDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		84B01AD31A81231D0032CBC5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		84B01AD41A81231E0032CBC5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		84B01AD61A81231E0032CBC5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		84B01AD91A81231E0032CBC5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		84B01ADB1A81231E0032CBC5 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		84B01ADE1A81231E0032CBC5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		84B01AE41A81231E0032CBC5 /* DollerGestureRecognizerDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DollerGestureRecognizerDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		84B01AE91A81231E0032CBC5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		84B01AEA1A81231E0032CBC5 /* DollerGestureRecognizerDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DollerGestureRecognizerDemoTests.swift; sourceTree = "<group>"; };
-		84B01AF51A8123530032CBC5 /* DollerGestureRecognizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DollerGestureRecognizer.swift; path = DollerGestureRecognizer/DollerGestureRecognizer.swift; sourceTree = "<group>"; };
-		84B01AF71A8123920032CBC5 /* GestureView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GestureView.swift; sourceTree = "<group>"; };
+		84B01ACF1A81231D0032CBC5 /* OneDollerGestureRecognizerDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OneDollerGestureRecognizerDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		84B01AD31A81231D0032CBC5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; name = Info.plist; path = OneDollerGestureRecognizerDemo/Info.plist; sourceTree = "<group>"; };
+		84B01AE41A81231E0032CBC5 /* OneDollerGestureRecognizerDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OneDollerGestureRecognizerDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		84B01AE91A81231E0032CBC5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; name = Info.plist; path = OneDollerGestureRecognizerDemoTests/Info.plist; sourceTree = "<group>"; };
+		D625F0411A81C61F00EFD3B4 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = OneDollerGestureRecognizerDemo/AppDelegate.swift; sourceTree = SOURCE_ROOT; };
+		D625F0421A81C61F00EFD3B4 /* GestureView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GestureView.swift; path = OneDollerGestureRecognizerDemo/GestureView.swift; sourceTree = SOURCE_ROOT; };
+		D625F0431A81C61F00EFD3B4 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = OneDollerGestureRecognizerDemo/ViewController.swift; sourceTree = SOURCE_ROOT; };
+		D625F04E1A81C65A00EFD3B4 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = OneDollerGestureRecognizerDemo/Images.xcassets; sourceTree = SOURCE_ROOT; };
+		D625F0531A81C66500EFD3B4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = OneDollerGestureRecognizerDemo/Base.lproj/LaunchScreen.xib; sourceTree = SOURCE_ROOT; };
+		D625F0551A81C66500EFD3B4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = OneDollerGestureRecognizerDemo/Base.lproj/Main.storyboard; sourceTree = SOURCE_ROOT; };
+		D625F0581A81C67F00EFD3B4 /* OneDollerGestureRecognizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OneDollerGestureRecognizer.swift; path = OneDollerGestureRecognizer/OneDollerGestureRecognizer.swift; sourceTree = "<group>"; };
+		D625F05A1A81C69500EFD3B4 /* OneDollerGestureRecognizerDemoTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OneDollerGestureRecognizerDemoTests.swift; path = OneDollerGestureRecognizerDemoTests/OneDollerGestureRecognizerDemoTests.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,9 +63,9 @@
 		84B01AC61A81231D0032CBC5 = {
 			isa = PBXGroup;
 			children = (
-				84B01AF41A8123290032CBC5 /* DollerGestureRecognizer */,
-				84B01AD11A81231D0032CBC5 /* DollerGestureRecognizerDemo */,
-				84B01AE71A81231E0032CBC5 /* DollerGestureRecognizerDemoTests */,
+				84B01AF41A8123290032CBC5 /* OneDollerGestureRecognizer */,
+				84B01AD11A81231D0032CBC5 /* OneDollerGestureRecognizerDemo */,
+				84B01AE71A81231E0032CBC5 /* OneDollerGestureRecognizerDemoTests */,
 				84B01AD01A81231D0032CBC5 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -73,23 +73,24 @@
 		84B01AD01A81231D0032CBC5 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				84B01ACF1A81231D0032CBC5 /* DollerGestureRecognizerDemo.app */,
-				84B01AE41A81231E0032CBC5 /* DollerGestureRecognizerDemoTests.xctest */,
+				84B01ACF1A81231D0032CBC5 /* OneDollerGestureRecognizerDemo.app */,
+				84B01AE41A81231E0032CBC5 /* OneDollerGestureRecognizerDemoTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		84B01AD11A81231D0032CBC5 /* DollerGestureRecognizerDemo */ = {
+		84B01AD11A81231D0032CBC5 /* OneDollerGestureRecognizerDemo */ = {
 			isa = PBXGroup;
 			children = (
-				84B01AD41A81231E0032CBC5 /* AppDelegate.swift */,
-				84B01AD61A81231E0032CBC5 /* ViewController.swift */,
-				84B01AF71A8123920032CBC5 /* GestureView.swift */,
-				84B01AD81A81231E0032CBC5 /* Main.storyboard */,
-				84B01ADB1A81231E0032CBC5 /* Images.xcassets */,
-				84B01ADD1A81231E0032CBC5 /* LaunchScreen.xib */,
+				D625F0411A81C61F00EFD3B4 /* AppDelegate.swift */,
+				D625F0421A81C61F00EFD3B4 /* GestureView.swift */,
+				D625F0431A81C61F00EFD3B4 /* ViewController.swift */,
+				D625F0521A81C66500EFD3B4 /* LaunchScreen.xib */,
+				D625F0541A81C66500EFD3B4 /* Main.storyboard */,
+				D625F04E1A81C65A00EFD3B4 /* Images.xcassets */,
 				84B01AD21A81231D0032CBC5 /* Supporting Files */,
 			);
+			name = OneDollerGestureRecognizerDemo;
 			path = DollerGestureRecognizerDemo;
 			sourceTree = "<group>";
 		};
@@ -101,12 +102,13 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		84B01AE71A81231E0032CBC5 /* DollerGestureRecognizerDemoTests */ = {
+		84B01AE71A81231E0032CBC5 /* OneDollerGestureRecognizerDemoTests */ = {
 			isa = PBXGroup;
 			children = (
-				84B01AEA1A81231E0032CBC5 /* DollerGestureRecognizerDemoTests.swift */,
+				D625F05A1A81C69500EFD3B4 /* OneDollerGestureRecognizerDemoTests.swift */,
 				84B01AE81A81231E0032CBC5 /* Supporting Files */,
 			);
+			name = OneDollerGestureRecognizerDemoTests;
 			path = DollerGestureRecognizerDemoTests;
 			sourceTree = "<group>";
 		};
@@ -118,20 +120,20 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		84B01AF41A8123290032CBC5 /* DollerGestureRecognizer */ = {
+		84B01AF41A8123290032CBC5 /* OneDollerGestureRecognizer */ = {
 			isa = PBXGroup;
 			children = (
-				84B01AF51A8123530032CBC5 /* DollerGestureRecognizer.swift */,
+				D625F0581A81C67F00EFD3B4 /* OneDollerGestureRecognizer.swift */,
 			);
-			name = DollerGestureRecognizer;
+			name = OneDollerGestureRecognizer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		84B01ACE1A81231D0032CBC5 /* DollerGestureRecognizerDemo */ = {
+		84B01ACE1A81231D0032CBC5 /* OneDollerGestureRecognizerDemo */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 84B01AEE1A81231E0032CBC5 /* Build configuration list for PBXNativeTarget "DollerGestureRecognizerDemo" */;
+			buildConfigurationList = 84B01AEE1A81231E0032CBC5 /* Build configuration list for PBXNativeTarget "OneDollerGestureRecognizerDemo" */;
 			buildPhases = (
 				84B01ACB1A81231D0032CBC5 /* Sources */,
 				84B01ACC1A81231D0032CBC5 /* Frameworks */,
@@ -141,14 +143,14 @@
 			);
 			dependencies = (
 			);
-			name = DollerGestureRecognizerDemo;
+			name = OneDollerGestureRecognizerDemo;
 			productName = DollerGestureRecognizerDemo;
-			productReference = 84B01ACF1A81231D0032CBC5 /* DollerGestureRecognizerDemo.app */;
+			productReference = 84B01ACF1A81231D0032CBC5 /* OneDollerGestureRecognizerDemo.app */;
 			productType = "com.apple.product-type.application";
 		};
-		84B01AE31A81231E0032CBC5 /* DollerGestureRecognizerDemoTests */ = {
+		84B01AE31A81231E0032CBC5 /* OneDollerGestureRecognizerDemoTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 84B01AF11A81231E0032CBC5 /* Build configuration list for PBXNativeTarget "DollerGestureRecognizerDemoTests" */;
+			buildConfigurationList = 84B01AF11A81231E0032CBC5 /* Build configuration list for PBXNativeTarget "OneDollerGestureRecognizerDemoTests" */;
 			buildPhases = (
 				84B01AE01A81231E0032CBC5 /* Sources */,
 				84B01AE11A81231E0032CBC5 /* Frameworks */,
@@ -159,9 +161,9 @@
 			dependencies = (
 				84B01AE61A81231E0032CBC5 /* PBXTargetDependency */,
 			);
-			name = DollerGestureRecognizerDemoTests;
+			name = OneDollerGestureRecognizerDemoTests;
 			productName = DollerGestureRecognizerDemoTests;
-			productReference = 84B01AE41A81231E0032CBC5 /* DollerGestureRecognizerDemoTests.xctest */;
+			productReference = 84B01AE41A81231E0032CBC5 /* OneDollerGestureRecognizerDemoTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -182,7 +184,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 84B01ACA1A81231D0032CBC5 /* Build configuration list for PBXProject "DollerGestureRecognizerDemo" */;
+			buildConfigurationList = 84B01ACA1A81231D0032CBC5 /* Build configuration list for PBXProject "OneDollerGestureRecognizerDemo" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -195,8 +197,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				84B01ACE1A81231D0032CBC5 /* DollerGestureRecognizerDemo */,
-				84B01AE31A81231E0032CBC5 /* DollerGestureRecognizerDemoTests */,
+				84B01ACE1A81231D0032CBC5 /* OneDollerGestureRecognizerDemo */,
+				84B01AE31A81231E0032CBC5 /* OneDollerGestureRecognizerDemoTests */,
 			);
 		};
 /* End PBXProject section */
@@ -206,9 +208,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				84B01ADA1A81231E0032CBC5 /* Main.storyboard in Resources */,
-				84B01ADF1A81231E0032CBC5 /* LaunchScreen.xib in Resources */,
-				84B01ADC1A81231E0032CBC5 /* Images.xcassets in Resources */,
+				D625F0571A81C66500EFD3B4 /* Main.storyboard in Resources */,
+				D625F0561A81C66500EFD3B4 /* LaunchScreen.xib in Resources */,
+				D625F0511A81C65A00EFD3B4 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -226,10 +228,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				84B01AD71A81231E0032CBC5 /* ViewController.swift in Sources */,
-				84B01AD51A81231E0032CBC5 /* AppDelegate.swift in Sources */,
-				84B01AF81A8123920032CBC5 /* GestureView.swift in Sources */,
-				84B01AF61A8123530032CBC5 /* DollerGestureRecognizer.swift in Sources */,
+				D625F0591A81C67F00EFD3B4 /* OneDollerGestureRecognizer.swift in Sources */,
+				D625F0441A81C61F00EFD3B4 /* AppDelegate.swift in Sources */,
+				D625F0461A81C61F00EFD3B4 /* ViewController.swift in Sources */,
+				D625F0451A81C61F00EFD3B4 /* GestureView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -237,7 +239,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				84B01AEB1A81231E0032CBC5 /* DollerGestureRecognizerDemoTests.swift in Sources */,
+				D625F05C1A81C6AD00EFD3B4 /* OneDollerGestureRecognizerDemoTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -246,26 +248,26 @@
 /* Begin PBXTargetDependency section */
 		84B01AE61A81231E0032CBC5 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 84B01ACE1A81231D0032CBC5 /* DollerGestureRecognizerDemo */;
+			target = 84B01ACE1A81231D0032CBC5 /* OneDollerGestureRecognizerDemo */;
 			targetProxy = 84B01AE51A81231E0032CBC5 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		84B01AD81A81231E0032CBC5 /* Main.storyboard */ = {
+		D625F0521A81C66500EFD3B4 /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				84B01AD91A81231E0032CBC5 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		84B01ADD1A81231E0032CBC5 /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				84B01ADE1A81231E0032CBC5 /* Base */,
+				D625F0531A81C66500EFD3B4 /* Base */,
 			);
 			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+		D625F0541A81C66500EFD3B4 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D625F0551A81C66500EFD3B4 /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -352,9 +354,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = DollerGestureRecognizerDemo/Info.plist;
+				INFOPLIST_FILE = OneDollerGestureRecognizerDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = OneDollerGestureRecognizerDemo;
 			};
 			name = Debug;
 		};
@@ -362,9 +364,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = DollerGestureRecognizerDemo/Info.plist;
+				INFOPLIST_FILE = OneDollerGestureRecognizerDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = OneDollerGestureRecognizerDemo;
 			};
 			name = Release;
 		};
@@ -380,10 +382,10 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = DollerGestureRecognizerDemoTests/Info.plist;
+				INFOPLIST_FILE = OneDollerGestureRecognizerDemoTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DollerGestureRecognizerDemo.app/DollerGestureRecognizerDemo";
+				PRODUCT_NAME = OneDollerGestureRecognizerDemoTests;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OneDollerGestureRecognizerDemo.app/OneDollerGestureRecognizerDemo";
 			};
 			name = Debug;
 		};
@@ -395,17 +397,17 @@
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = DollerGestureRecognizerDemoTests/Info.plist;
+				INFOPLIST_FILE = OneDollerGestureRecognizerDemoTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DollerGestureRecognizerDemo.app/DollerGestureRecognizerDemo";
+				PRODUCT_NAME = OneDollerGestureRecognizerDemoTests;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OneDollerGestureRecognizerDemo.app/OneDollerGestureRecognizerDemo";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		84B01ACA1A81231D0032CBC5 /* Build configuration list for PBXProject "DollerGestureRecognizerDemo" */ = {
+		84B01ACA1A81231D0032CBC5 /* Build configuration list for PBXProject "OneDollerGestureRecognizerDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				84B01AEC1A81231E0032CBC5 /* Debug */,
@@ -414,21 +416,23 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		84B01AEE1A81231E0032CBC5 /* Build configuration list for PBXNativeTarget "DollerGestureRecognizerDemo" */ = {
+		84B01AEE1A81231E0032CBC5 /* Build configuration list for PBXNativeTarget "OneDollerGestureRecognizerDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				84B01AEF1A81231E0032CBC5 /* Debug */,
 				84B01AF01A81231E0032CBC5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
-		84B01AF11A81231E0032CBC5 /* Build configuration list for PBXNativeTarget "DollerGestureRecognizerDemoTests" */ = {
+		84B01AF11A81231E0032CBC5 /* Build configuration list for PBXNativeTarget "OneDollerGestureRecognizerDemoTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				84B01AF21A81231E0032CBC5 /* Debug */,
 				84B01AF31A81231E0032CBC5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

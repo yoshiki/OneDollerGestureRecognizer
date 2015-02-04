@@ -1,7 +1,7 @@
 import UIKit
 
 class GestureView: UIView {
-    var gestureRecognizer: DollerGestureRecognizer = DollerGestureRecognizer()
+    var gestureRecognizer: OneDollerGestureRecognizer = OneDollerGestureRecognizer()
     var path: UIBezierPath = UIBezierPath()
     
     override func awakeFromNib() {

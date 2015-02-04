@@ -1,7 +1,7 @@
 import UIKit
 import XCTest
 
-class DollerGestureRecognizerDemoTests: XCTestCase {
+class OneDollerGestureRecognizerDemoTests: XCTestCase {
     
     override func setUp() {
         super.setUp()

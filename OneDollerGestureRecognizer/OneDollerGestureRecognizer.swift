@@ -4,7 +4,7 @@ public struct Vector2D {
     var x = 0.0, y = 0.0
 }
 
-public class DollerGestureRecognizer {
+public class OneDollerGestureRecognizer {
     public var touchPoints: Array<Vector2D>?
     public var resampledPoints: Array<Vector2D>?
     public var templates: Array<AnyObject>?
@@ -13,7 +13,7 @@ public class DollerGestureRecognizer {
         
     }
     
-    public func addPoint(x _: Float, y: Float) {
+    public func addPoint(#x: Float, y: Float) {
         
     }
     
