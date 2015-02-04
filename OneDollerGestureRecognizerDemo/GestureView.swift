@@ -58,19 +58,19 @@ class GestureView: UIView {
         var point = touch.locationInView(self)
         self.gestureRecognizer.addPoint(point)
         
-        switch self.mode {
-        case .Register:
-            var result = self.gestureRecognizer.serialize()
-            self.drawResample(result.samples)
-        case .Detect:
-            self.gestureRecognizer.detect { (name, score) -> Void in
-                println("matched name: \(name!), score: \(score!)")
-                if let delegate = self.delegate {
-                    delegate.detect(name!, score: score!)
-                }
-                self.cleanup()
-            }
-        }
+//        switch self.mode {
+//        case .Register:
+//            var result = self.gestureRecognizer.serialize()
+//            self.drawResample(result.samples)
+//        case .Detect:
+//            self.gestureRecognizer.detect { (name, score) -> Void in
+//                println("matched name: \(name!), score: \(score!)")
+//                if let delegate = self.delegate {
+//                    delegate.detect(name!, score: score!)
+//                }
+//                self.cleanup()
+//            }
+//        }
 
         super.touchesEnded(touches, withEvent: event)
     }
