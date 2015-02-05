@@ -2,7 +2,7 @@ import Foundation
 import CoreGraphics
 
 public class OneDollerGestureRecognizer {
-    let samplePoints = 32
+    let n = 32 // number of sampling points
     var touchPoints = [CGPoint]()
     var templates = [String: [CGPoint]]()
     
@@ -15,29 +15,20 @@ public class OneDollerGestureRecognizer {
     }
     
     public func detect(completion: (name: String?, score: Float?) -> Void) {
-//        let result = Resample(self.touchPoints, self.samplePoints)
-//        var bestTemplateName = ""
-//        var best = Float.infinity
-//        for (name, samples) in self.templates {
-//            var template = [CGPoint]()
-//            assert(self.samplePoints == samples.count, "Template size mismatch")
-//            for i in 0..<self.samplePoints {
-//                template.append(samples[i])
-//            }
-//            let score = DistanceAtBestAngle(result.samples, self.samplePoints, template)
-//            if score < best {
-//                bestTemplateName = name
-//                best = score
-//            }
-//        }
-//        var bestScore = best
-//        completion(name: bestTemplateName, score: bestScore)
+        var resampledPoints = Resample(self.touchPoints, self.n)
+        resampledPoints = RotateToZero(resampledPoints)
+        resampledPoints = ScaleToSquare(resampledPoints)
+        resampledPoints = TranslateToOrigin(resampledPoints)
+        let result = Recognize(resampledPoints, self.templates)
+        completion(name: result.name, score: result.score)
     }
     
-//    public func serialize() -> (samples: [CGPoint], center: CGPoint, radians: Float) {
-    public func serialize() {
-//        let result = Resample(self.touchPoints, self.samplePoints)
-//        return result
+    public func serialize() -> [CGPoint] {
+        var resampledPoints = Resample(self.touchPoints, self.n)
+        resampledPoints = RotateToZero(resampledPoints)
+        resampledPoints = ScaleToSquare(resampledPoints)
+        resampledPoints = TranslateToOrigin(resampledPoints)
+        return resampledPoints
     }
     
     public func addTemplate(name: String, samples: [CGPoint]) {
@@ -50,13 +41,6 @@ public class OneDollerGestureRecognizer {
     
 }
 
-func Recognize(points: [CGPoint], templates: [[CGPoint]]) {
-    var best = Float.infinity
-    for template in templates {
-    }
-}
-
-//
 func Resample(points: [CGPoint], n: Int) -> [CGPoint] {
     var origPoints = points
     var newPoints = [CGPoint]()
@@ -79,11 +63,9 @@ func Resample(points: [CGPoint], n: Int) -> [CGPoint] {
     return newPoints
 }
 
-//
 func Centroid(points: [CGPoint]) -> CGPoint {
     var center = CGPointZero
-    for i in 0..<points.count {
-        let point = points[i]
+    for point in points {
         center.x += point.x
         center.y += point.y
     }
@@ -92,14 +74,12 @@ func Centroid(points: [CGPoint]) -> CGPoint {
     return center
 }
 
-//
 func Distance(point1: CGPoint, point2: CGPoint) -> Float {
     let dx = Float(point2.x - point1.x)
     let dy = Float(point2.y - point1.y)
     return sqrtf(dx * dx + dy * dy)
 }
 
-//
 func PathLength(points: [CGPoint]) -> Float {
     var d: Float = 0.0
     for i in 1..<points.count {
@@ -108,7 +88,6 @@ func PathLength(points: [CGPoint]) -> Float {
     return d
 }
 
-//
 func RotateToZero(points: [CGPoint]) -> [CGPoint] {
     let c = Centroid(points)
     let theta = Float(atan2(c.y - points[0].y, c.x - points[0].x))
@@ -116,7 +95,6 @@ func RotateToZero(points: [CGPoint]) -> [CGPoint] {
     return newPoints
 }
 
-//
 func RotateBy(points: [CGPoint], theta: Float) -> [CGPoint] {
     let rotateTransform = CGAffineTransformMakeRotation(CGFloat(theta))
     var newPoints = [CGPoint]()
@@ -127,7 +105,6 @@ func RotateBy(points: [CGPoint], theta: Float) -> [CGPoint] {
     return newPoints
 }
 
-//
 func BoundingBox(points: [CGPoint]) -> CGSize {
     var lowerLeft = CGPointZero, upperRight = CGPointZero
     for point in points {
@@ -147,58 +124,82 @@ func BoundingBox(points: [CGPoint]) -> CGSize {
     return CGSizeMake(upperRight.x - lowerLeft.x, lowerLeft.y - upperRight.y)
 }
 
-func Rotate(inout samples: [CGPoint], samplePoints: Int, radians: Float) {
-    let rotateTransform = CGAffineTransformMakeRotation(CGFloat(radians))
-    for i in 0..<samplePoints {
-        let point0 = samples[i]
-        let point = CGPointApplyAffineTransform(point0, rotateTransform)
-        samples[i] = point
-    }
-}
-
-func Scale(inout samples: [CGPoint], samplePoints: Int, xScale: CGFloat, yScale: CGFloat) {
-    let scaleTransform = CGAffineTransformMakeScale(xScale, yScale)
-    for i in 0..<samplePoints {
-        let point0 = samples[i]
-        let point = CGPointApplyAffineTransform(point0, scaleTransform)
-        samples[i] = point
-    }
-}
-
-func DistanceAtAngle(samples: [CGPoint], samplePoints: Int, template: [CGPoint], theta: Float) -> Float {
-    let maxPoints = 128
+func ScaleToSquare(points: [CGPoint], size: Int = 2) -> [CGPoint] {
+    var b = BoundingBox(points)
+    var q = CGPointZero
     var newPoints = [CGPoint]()
-    assert(samplePoints <= maxPoints, "`samplePoints` too large")
-    for i in 0..<samplePoints {
-        newPoints.append(samples[i])
+    for point in points {
+        q.x = point.x * (CGFloat(size) / b.width)
+        q.y = point.y * (CGFloat(size) / b.height)
+        newPoints.append(q)
     }
-    Rotate(&newPoints, samplePoints, theta)
-    return PathLength(newPoints)
+    return newPoints
 }
 
-func DistanceAtBestAngle(samples: [CGPoint], samplePoints: Int, template: [CGPoint]) -> Float {
-    var a = Float(-0.25 * M_PI)
-    var b = -a
-    let threshold = 0.1
-    let Phi = 0.5 * (-1.0 + sqrtf(5.0)) // Golden Ratio
+func TranslateToOrigin(points: [CGPoint]) -> [CGPoint] {
+    var c = Centroid(points)
+    var q = CGPointZero
+    var newPoints = [CGPoint]()
+    for point in points {
+        q.x = point.x - c.x
+        q.y = point.y - c.y
+        newPoints.append(q)
+    }
+    return newPoints
+}
+
+func Recognize(points: [CGPoint], templates: [String: [CGPoint]]) -> (name: String, score: Float) {
+    var b = Float.infinity // best distance
+    var n = "" // best template name
+    for (name, template) in templates {
+        var d = DistanceAtBestAngle(points, template)
+        if d < b {
+            b = d
+            n = name
+        }
+    }
+    var size: Float = 2
+    var score = 1 - b / 0.5 * sqrtf(powf(size, 2) + powf(size, 2))
+    return (n, score)
+}
+
+func DistanceAtBestAngle(points: [CGPoint], template: [CGPoint]) -> Float {
+    var a = Float(-0.25 * M_PI) // theta A
+    var b = -a // theta B
+    var threshold: Float = 0.1 // theta delta
+    let Phi = 1/2 * (-1.0 + sqrtf(5.0))
     var x1 = Phi * a + (1.0 - Phi) * b
-    var f1 = DistanceAtAngle(samples, samplePoints, template, x1)
+    var f1 = DistanceAtAngle(points, template, x1)
     var x2 = (1.0 - Phi) * a + Phi * b
-    var f2 = DistanceAtAngle(samples, samplePoints, template, x2)
-    while fabs(Double(b - a)) > threshold {
+    var f2 = DistanceAtAngle(points, template, x2)
+    while fabsf(Float(b - a)) > threshold {
         if f1 < f2 {
             b = x2
             x2 = x1
             f2 = f1
             x1 = Phi * a + (1.0 - Phi) * b
-            f1 = DistanceAtAngle(samples, samplePoints, template, x1)
+            f1 = DistanceAtAngle(points, template, x1)
         } else {
             a = x1
             x1 = x2
             f1 = f2
             x2 = (1.0 - Phi) * a + Phi * b
-            f2 = DistanceAtAngle(samples, samplePoints, template, x2)
+            f2 = DistanceAtAngle(points, template, x2)
         }
     }
     return min(f1, f2)
+}
+
+func DistanceAtAngle(points: [CGPoint], template: [CGPoint], theta: Float) -> Float {
+    var newPoints = RotateBy(points, theta)
+    var d = PathDistance(newPoints, template)
+    return d
+}
+
+func PathDistance(A: [CGPoint], B: [CGPoint]) -> Float {
+    var d: Float = 0.0
+    for i in 0..<A.count {
+        d += Distance(A[i], B[i])
+    }
+    return d / Float(A.count)
 }
